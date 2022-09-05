@@ -27,7 +27,7 @@
 <nav>
     <a href="#" class="logo">The Gang</a>
     <ul>
-    <li><a href="#">Sing Up</a></li>
+    <li><a href="javascript:()" onclick="showPopup();">Sing Up</a></li>
     <li><a href="#story">The Story</a></li>
     <li><a href="#more-info">More Info</a></li>
     </ul>
@@ -39,7 +39,8 @@
     Members will also receive pictures of us in all Kinds of shapes and sizes. Cool
     huh?
  </p>
-<button class="cta">Sing Me Up!</button>
+    <button class="cta" onclick="showPopup();">Sign Me Up!</button>
+    </div>
 </div>
 <div class="sep"></div>
 <div class="story" id="story">
@@ -66,11 +67,12 @@
 <footer>
 Made by developer <a href="https://github.com/Federicofk">Federicofk</a>
 </footer>
-<div class="popup">
+<div class="popup" id="popup">
     <div class="blanket"></div>
     <div class="content">
         <h2>Fill In Your Details</h2>
         <form action="">
+            <div class="row">
             <div class="item">
             <label for="">Your First Name</label>
         <input type="text" placeholder="Awesomeface" value="Luke"></input>
@@ -79,6 +81,8 @@ Made by developer <a href="https://github.com/Federicofk">Federicofk</a>
             <label>Your last Name</label>
         <input type="text" placeholder="Skywalker" ></input>
         </div>
+            </div> 
+            <div class="row"> 
         <div class="item">
             <label>Your Favourite Color</label>
         <input type="text" placeholder="Green" ></input>
@@ -87,11 +91,18 @@ Made by developer <a href="https://github.com/Federicofk">Federicofk</a>
             <label >Your Favourite Food</label>
         <input type="text" placeholder="Milk of THALA-SIREN" ></input>
         </div>
+            </div> 
         <button class="cta">I want In!</button>
         </form>
-        <button class="close">Close</button>
+        <button class="close" onclick="hidePopup();">Close</button>
     </div>
 </div>
+
+<script src="script.js" type="text/javascript"></script>
+
+
+
+
 
 </body>
 </html>
